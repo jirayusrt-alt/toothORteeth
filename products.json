@@ -1,0 +1,22 @@
+[
+  {
+    "id": "fresh-toothpaste-30",
+    "name": "ยาสีฟัน Fresh",
+    "mood": "fresh",
+    "type": "spray",
+    "size": "30ml",
+    "price": 90,
+    "image": "images/fresh.jpg",
+    "description": "ยาสีฟันกลิ่นสดชื่นสะอาด ขนาดพกพา ใช้ได้ทุกที่ ให้ความรู้สึกสดชื่นตลอดวัน"
+  },
+  {
+    "id": "fresh-mouthwash-100",
+    "name": "น้ำยาบ้วนปาก Fresh",
+    "mood": "fresh",
+    "type": "spray",
+    "size": "100ml",
+    "price": 139,
+    "image": "images/fresh.jpg",
+    "description": "น้ำยาบ้วนปากกลิ่นสดชื่นสะอาด ช่วยให้ปากรู้สึกสะอาดสดชื่นหลังมื้ออาหาร"
+  }
+]

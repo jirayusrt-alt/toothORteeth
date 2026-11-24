@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สั่งซื้อสินค้า — toothORteeth</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* สไตล์ฟอร์ม (เฉพาะหน้านี้) — เส้นบาง สีเข้มนุ่ม ไม่ใช้สีฉูดฉาด */
+    .form-wrap { max-width: 36rem; }
+
+    .field { margin-bottom: var(--space-3); }
+
+    .field label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+    }
+
+    .field input,
+    .field textarea {
+      display: block;
+      width: 100%;
+      padding: 0.8rem 1rem;
+      background: var(--white);
+      color: var(--ink);
+      border: var(--border-faint);
+      border-radius: 0;
+      font: inherit;
+      font-size: 1rem;
+      line-height: 1.6;
+      transition: border-color 0.25s ease;
+    }
+
+    .field input:hover,
+    .field textarea:hover,
+    .field input:focus,
+    .field textarea:focus {
+      border-color: var(--line);
+    }
+
+    .field textarea { resize: vertical; }
+
+    .form-actions { margin-top: var(--space-4); }
+
+    .form-actions .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    h1 { line-height: 1.4; } /* ตัวอักษรไทยต้องการระยะบรรทัดสูงกว่า */
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">toothORteeth</a>
+      <nav aria-label="เมนูหลัก">
+        <ul class="nav">
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="product.html">สินค้า</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container form-wrap">
+
+        <div class="section__head">
+          <h1>สั่งซื้อสินค้า</h1>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+
+        <form id="orderForm">
+
+          <div class="field">
+            <label for="customerName">ชื่อลูกค้า</label>
+            <input type="text" id="customerName" name="customerName" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="contact">เบอร์โทร / Line</label>
+            <input type="text" id="contact" name="contact" required>
+          </div>
+
+          <div class="field">
+            <label for="items">รายการสินค้า</label>
+            <textarea id="items" name="items" rows="2" required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="total">จำนวนเงินรวม (บาท)</label>
+            <input type="number" id="total" name="total" min="0" step="any" inputmode="decimal" required>
+          </div>
+
+          <div class="field">
+            <label for="note">หมายเหตุ (ไม่บังคับ)</label>
+            <textarea id="note" name="note" rows="3"></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn--accent">ยืนยันสั่งซื้อ</button>
+          </div>
+
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>toothORteeth</span>
+      <span>&copy; 2026 toothORteeth สงวนลิขสิทธิ์</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

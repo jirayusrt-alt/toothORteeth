@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>toothORteeth — เลือกความรู้สึกที่ใช่ให้ช่องปากของคุณ</title>
+  <meta name="description" content="เลือกความรู้สึกที่ใช่ให้ช่องปากของคุณ ด้วยยาสีฟันและน้ำยาบ้วนปาก 2 อารมณ์ที่ออกแบบมาเพื่อเติมความสดชื่นและอ่อนโยนในทุกช่วงเวลาของวัน">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ปรับเฉพาะหน้าแรก: hero เต็มจอแรกที่เห็น */
+    .hero--full {
+      display: flex;
+      align-items: center;
+      min-height: calc(100vh - 6rem);
+      min-height: calc(100svh - 6rem);
+    }
+    .hero--full h1 {
+      max-width: 20em;
+      font-size: clamp(2rem, 5vw, 3.75rem);
+      font-weight: 400;
+      line-height: 1.4; /* ตัวอักษรไทยมีสระ/วรรณยุกต์ ต้องการระยะบรรทัดที่สูงกว่า */
+    }
+    @media (max-width: 48rem) {
+      .hero--full {
+        min-height: calc(100vh - 9.5rem);
+        min-height: calc(100svh - 9.5rem);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">toothORteeth</a>
+      <nav aria-label="เมนูหลัก">
+        <ul class="nav">
+          <li><a href="index.html" aria-current="page">หน้าแรก</a></li>
+          <li><a href="product.html">สินค้า</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero: เต็มจอแรก -->
+    <section class="hero hero--full">
+      <div class="container">
+        <h1>เลือกความรู้สึกที่ใช่ให้ช่องปากของคุณ</h1>
+        <span class="rule" aria-hidden="true"></span>
+        <p>ด้วยยาสีฟันและน้ำยาบ้วนปาก 2 อารมณ์ ที่ออกแบบมาเพื่อเติมความสดชื่นและอ่อนโยนในทุกช่วงเวลาของวัน</p>
+        <a class="btn btn--accent" href="product.html">ดูสินค้าทั้งหมด</a>
+      </div>
+    </section>
+
+    <!-- 4 Mood: กดแล้วไป product.html พร้อมกรอง -->
+    <section class="section" id="moods">
+      <div class="container">
+        <div class="section__head">
+          <h2>เลือกตามอารมณ์</h2>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+
+        <div class="product-grid">
+          <a class="product-card" href="product.html?mood=fresh" data-mood="fresh">
+            <h3 class="product-card__title">Fresh</h3>
+            <span class="mood-underline" aria-hidden="true"></span>
+            <p class="product-card__desc">สดชื่น โปร่งโล่ง สะอาด เบาสบายปาก ปลุกความตื่นตัวให้คุณเริ่มต้นวันได้อย่างมั่นใจ</p>
+          </a>
+
+          <a class="product-card" href="product.html?mood=sweet" data-mood="sweet">
+            <h3 class="product-card__title">Sweet</h3>
+            <span class="mood-underline" aria-hidden="true"></span>
+            <p class="product-card__desc">หวานละมุน อ่อนโยน ให้ความรู้สึกอบอุ่นสบายใจในทุกครั้งที่ดูแลช่องปาก</p>
+          </a>
+
+          <a class="product-card" href="product.html?mood=confident" data-mood="confident">
+            <h3 class="product-card__title">Confident</h3>
+            <span class="mood-underline" aria-hidden="true"></span>
+            <p class="product-card__desc">เฉียบคม ชัดเจน พร้อมสำหรับทุกการพบปะ</p>
+          </a>
+
+          <a class="product-card" href="product.html?mood=romance" data-mood="romance">
+            <h3 class="product-card__title">Romance</h3>
+            <span class="mood-underline" aria-hidden="true"></span>
+            <p class="product-card__desc">ลึกซึ้ง นุ่มนวล เหมาะกับช่วงเวลาพิเศษ</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>toothORteeth</span>
+      <span>&copy; 2026 toothORteeth สงวนลิขสิทธิ์</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
